@@ -3,7 +3,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, Send, Edit, Trash2, Plus } from "lucide-react"
+import { ScheduleTweetDialog } from "@/components/schedule/ScheduleTweetDialog"
+import { Calendar, Clock, Send, Edit, Trash2 } from "lucide-react"
 
 export default function SchedulePage() {
   return (
@@ -11,10 +12,7 @@ export default function SchedulePage() {
       <div className="flex items-center justify-between space-y-2">
         <h2 className="text-3xl font-bold tracking-tight">Schedule</h2>
         <div className="flex items-center space-x-2">
-          <Button>
-            <Plus className="h-4 w-4 mr-2" />
-            Schedule Tweet
-          </Button>
+          <ScheduleTweetDialog />
         </div>
       </div>
       

@@ -5,13 +5,13 @@ import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
+import { ProfileSettingsDialog } from "@/components/profile/ProfileSettingsDialog"
+import { EditProfileDialog } from "@/components/profile/EditProfileDialog"
 import { 
   User2, 
   MapPin, 
   Calendar, 
   Link, 
-  Settings, 
-  Edit, 
   Users, 
   Heart,
   MessageCircle,
@@ -26,14 +26,8 @@ export default function ProfilePage() {
       <div className="flex items-center justify-between space-y-2">
         <h2 className="text-3xl font-bold tracking-tight">Profile</h2>
         <div className="flex items-center space-x-2">
-          <Button variant="outline">
-            <Edit className="h-4 w-4 mr-2" />
-            Edit Profile
-          </Button>
-          <Button variant="outline">
-            <Settings className="h-4 w-4 mr-2" />
-            Settings
-          </Button>
+          <EditProfileDialog />
+          <ProfileSettingsDialog />
         </div>
       </div>
 
