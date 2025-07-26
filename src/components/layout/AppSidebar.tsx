@@ -29,6 +29,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 const data = {
   user: {
@@ -173,18 +174,21 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="/profile">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground">
-                  <User2 className="size-4" />
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">{data.user.name}</span>
-                  <span className="truncate text-xs">{data.user.email}</span>
-                </div>
-                <ChevronUp className="ml-auto size-4" />
-              </a>
-            </SidebarMenuButton>
+            <div className="flex items-center gap-2 px-2 py-1">
+              <SidebarMenuButton size="lg" asChild className="flex-1">
+                <a href="/profile">
+                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground">
+                    <User2 className="size-4" />
+                  </div>
+                  <div className="grid flex-1 text-left text-sm leading-tight">
+                    <span className="truncate font-semibold">{data.user.name}</span>
+                    <span className="truncate text-xs">{data.user.email}</span>
+                  </div>
+                  <ChevronUp className="ml-auto size-4" />
+                </a>
+              </SidebarMenuButton>
+              <ThemeToggle />
+            </div>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
